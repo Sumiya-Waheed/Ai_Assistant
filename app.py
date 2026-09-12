@@ -361,7 +361,7 @@ def call_gemini(system_prompt: str, user_prompt: str, model: str = "gemini-3.6-f
 
 def ask_llm(system_prompt: str, user_prompt: str, provider: str, model_choice: str) -> str:
     if provider == "Gemini":
-        model = "gemini-2.5-flash" if model_choice == "Fast" else "gemini-2.5-pro"
+        model = "gemini-3.6-flash" if model_choice == "Fast" else "gemini-3.6-pro"
         return call_gemini(system_prompt, user_prompt, model=model)
 
     model = DEFAULT_GROQ_FAST if model_choice == "Fast" else DEFAULT_GROQ_THOROUGH
