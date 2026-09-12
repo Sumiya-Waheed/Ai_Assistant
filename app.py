@@ -338,7 +338,7 @@ def call_groq(system_prompt: str, user_prompt: str, model: str, temperature: flo
     return response.choices[0].message.content
 
 
-def call_gemini(system_prompt: str, user_prompt: str, model: str = "gemini-2.5-flash") -> str:
+def call_gemini(system_prompt: str, user_prompt: str, model: str = "gemini-3.6-flash") -> str:
     key = get_gemini_key()
     if not key:
         raise RuntimeError(
